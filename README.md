@@ -1,4 +1,4 @@
-# Calculator
+# Library
 
 This is a solution to the "Library" project in the [Odin Project](https://www.theodinproject.com/lessons/node-path-javascript-library).  The Odin project is a open source tutorial for learning web development.
 
@@ -21,7 +21,7 @@ Users adds book cards to a library website.
 ### Links
 
 - Solution URL: [Code on GitHub](https://github.com/Ben-Bot-22/books)
-- Live Site URL: [GitHub pages live URL]()
+- Live Site URL: [GitHub pages live URL](https://ben-bot-22.github.io/books/)
 
 ## My process
 
