@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,700&family=Montserrat:wght@500;700&display=swap"
+      rel="stylesheet"
+    />
+    <title>Book Shelf</title>
+  </head>
+  <body>
+    <div class="header">
+      <div class="app-name">book shelf</div>
+    </div>
+    <div class="grid-container">
+      <div class="add-btn-container">
+        <button class="add-btn">+ add book</button>
+        <div class="add-form">
+          <form class="modal-content">
+            <p class="modal-title">Add new book</p>
+            <input type="text" placeholder="Title" name="title" id="title" required>
+            <input type="number" placeholder="Number of Pages" name="pages" id="number" required>
+            <div><input type="checkbox" name="has-read" id="read"><label for="read"> Have you read it?</label></div>
+            <button class="card-btn" id="submit">Submit</button>
+          </form>
+        </div>
+      </div>
+      <section class="book-content"> 
+        <!-- Generate cards under .book-content -->
+      </section>
+    </div>
+    <script src="index.js"></script>
+  </body>
+</html>

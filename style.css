@@ -1,0 +1,184 @@
+* {
+  font-family: "Fraunces", serif;
+  /* font-family: 'Montserrat', sans-serif; */
+}
+
+body {
+  margin: 0;
+}
+
+:root {
+  --dark-purple: #6d39bb;
+  --purple: #a66cff;
+  --light-purple: #dbdcfd;
+  background-color: #15202b;
+}
+
+.grid-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+
+.app-name {
+  font-size: xx-large;
+  padding-left: 20px;
+  color: var(--purple);
+  font-weight: 900;
+}
+
+.header {
+  /* border: 1px solid red; */
+  padding: 10px;
+  width: 100vw;
+  height: 50px;
+  display: flex;
+  align-items: center;
+}
+
+.add-btn-container {
+  display: flex;
+  flex-direction: column;
+  /* border: 1px solid red; */
+  /* align-items: center; */
+  /* justify-content: center; */
+}
+
+.add-btn {
+  background-color: var(--purple);
+  border: none;
+  font-size: large;
+  color: white;
+  border-radius: 4px;
+  height: 30px;
+  width: 120px;
+  margin: 20px auto;
+  box-shadow: 0px 4px var(--dark-purple);
+}
+
+.book-content {
+  display: grid;
+  width: 33%;
+  grid-template-columns: repeat(auto-fill, minmax(100px, 1fr));
+  grid-template-rows: auto;
+  column-gap: 40px;
+  row-gap: 15px;
+}
+
+.content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  /* justify-content: center; */
+  gap: 5px;
+}
+
+.content > div {
+  align-self: center;
+  width: 100%;
+  text-align: center;
+}
+
+.content div:nth-child(2) {
+  /* border: 1px solid red; */
+  font-size: small;
+}
+
+.book-card {
+  background-color: var(--light-purple);
+  color: var(--purple);
+  border-radius: 4px;
+  padding: 10px;
+  width: 100%;
+  height: auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  box-shadow: 0px 4px 4px var(--dark-purple);
+  border: 1px solid var(--purple);
+}
+
+.card-btn {
+  border: 1px solid var(--purple);
+  border-radius: 4px;
+  width: 100px;
+  height: 22px;
+  color: var(--purple);
+  background-color: white;
+
+  box-shadow: 0px 2px var(--purple);
+}
+
+::placeholder {
+  color: var(--purple);
+}
+
+input {
+  border: 1px solid var(--purple);
+  border-radius: 5px;
+  padding: 5px;
+  color: var(--purple);
+}
+
+.modal-title {
+  text-align: center;
+  margin: 5px 0;
+  /* border: 1px solid red; */
+}
+
+.add-form {
+  position: absolute;
+  align-self: center;
+  margin-top: 60px;
+}
+
+.blur {
+  filter: blur(5px);
+  z-index: -1;
+}
+
+.modal-content {
+  display: none;
+  flex-direction: column;
+  background-color: white;
+  padding: 10px;
+  gap: 5px;
+  background-color: var(--light-purple);
+  border-radius: 5px;
+  color: var(--purple);
+  border: 1px solid var(--purple);
+
+  animation-name: pop-in; 
+  animation-timing-function: cubic-bezier(0.5, 1, 0.89, 1);
+  animation-duration: 0.15s;
+}
+
+@keyframes pop-in {
+    from {
+      transform: scale(0);
+    }
+    to {
+      transform: scale(1);
+    }
+  }
+
+@keyframes pop-out {
+    from {
+        transform: scale(1);
+      }
+      to {
+        transform: scale(0);
+      }
+}
+
+#submit {
+  font-size: large;
+  height: 30px;
+  align-self: center;
+}
+
+/* Colors: https://colorhunt.co/palette/a66cff9c9efeafb4ffb1e1ff */
+/* Font: https://fonts.google.com/specimen/Yeseva+One?category=Sans+Serif,Display,Monospace&preview.text=book%20shelf&preview.text_type=custom */
