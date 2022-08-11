@@ -64,15 +64,19 @@ window.addEventListener("keydown", (event) => {
   }
 });
 
-function Book(title, pages, read) {
-  this.title = title;
-  this.pages = pages;
-  this.read = read;
+class Book {
+  constructor(title, pages, read) {
+    this.title = title;
+    this.pages = pages;
+    this.read = read;
+  }
+  toggleRead() {
+    this.read = !this.read;
+  }
+  info() {
+    return this.title + this.pages.toString() + " pages";
+  }
 }
-
-Book.prototype.toggleRead = function () {
-  this.read = !this.read;
-};
 
 function removeBook(e) {
   if (e.target.id === "remove-btn") {
@@ -125,10 +129,6 @@ function displayBooks() {
     renderBook(book);
   });
 }
-
-Book.prototype.info = function () {
-  return this.title + this.pages.toString() + " pages";
-};
 
 function setReadButton(book, readBtn) {
   if (book.read) {
